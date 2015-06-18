@@ -1,0 +1,16 @@
+<% include ../partials/header %>
+  <h1>Lemme see a comment (to be edited)!</h1>
+    <p>
+
+      <form action="/posts/<%= comment.post.id%>/comments/<%= comment._id%>?_method=put" method="POST">
+      <div>
+         <label for="body">Body:</label>
+         <input autofocus type="text" name="body" id="body" value="<%= comment.body%>">
+       </div>
+       <div>
+         <input type="submit" value="Update">
+       </div>
+      </form>
+    </p>
+<% include ../partials/footer %>
+

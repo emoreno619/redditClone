@@ -1,0 +1,17 @@
+<% include ../partials/header %>
+  <h1>Lemme see more about a comment!</h1>
+    <div>
+      <h2>
+        <%= comment.body%> <%= comment.creator%>
+      </h2>
+    </div>
+    <div>
+      <p>
+         <a href="/posts/<%= comment.post._id%>/comments/<%= comment._id%>/edit">Edit this comment</a>
+      </p>
+        <form action="/posts/<%= comment.post._id%>/comments/<%= comment._id%>?_method=DELETE" method="POST">
+          <input type="submit" value="DELETE">
+        </form>
+      </p>
+    </div>
+<% include ../partials/footer %>

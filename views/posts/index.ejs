@@ -1,0 +1,10 @@
+<% include ../partials/header %>
+	<h1>Lemme see your posts!</h1>
+	<% posts.forEach(function(post){ %>
+		<p>
+			<a href="/posts/<%= post._id%>"><%= post.title %></a>
+		</p>
+	<% }) %>
+	<a href="/login">Login!</a>
+	<a href="/posts/new">Add a new post!</a>
+<% include ../partials/footer %>
